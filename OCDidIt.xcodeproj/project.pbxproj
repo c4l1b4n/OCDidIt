@@ -14,6 +14,7 @@
 		02157214213D981900541DF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02157212213D981900541DF0 /* LaunchScreen.storyboard */; };
 		0279B2AF21435D8700A33150 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279B2AE21435D8700A33150 /* CategoryViewController.swift */; };
 		02C7926321409B6B00203C41 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C7926121409B6B00203C41 /* DataModel.xcdatamodeld */; };
+		064B9CC2A7E840F0DB996BA8 /* Pods_OCDidIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		02157215213D981900541DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0279B2AE21435D8700A33150 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = OCDidIt/Controllers/CategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C7926221409B6B00203C41 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3872DA7D9F3F1EB8776BD4B3 /* Pods-OCDidIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.debug.xcconfig"; sourceTree = "<group>"; };
+		CBB9AA77E09CDEBB6AB4D447 /* Pods-OCDidIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.release.xcconfig"; sourceTree = "<group>"; };
+		FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCDidIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064B9CC2A7E840F0DB996BA8 /* Pods_OCDidIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				02157208213D981400541DF0 /* OCDidIt */,
 				02157207213D981400541DF0 /* Products */,
+				12864F09274B11ACCE74A340 /* Pods */,
+				4CF1D55A91C72216272A7660 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		12864F09274B11ACCE74A340 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3872DA7D9F3F1EB8776BD4B3 /* Pods-OCDidIt.debug.xcconfig */,
+				CBB9AA77E09CDEBB6AB4D447 /* Pods-OCDidIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CF1D55A91C72216272A7660 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02157218213D981900541DF0 /* Build configuration list for PBXNativeTarget "OCDidIt" */;
 			buildPhases = (
+				D0D25E5B956260F14E7C5DA0 /* [CP] Check Pods Manifest.lock */,
 				02157202213D981400541DF0 /* Sources */,
 				02157203213D981400541DF0 /* Frameworks */,
 				02157204213D981400541DF0 /* Resources */,
+				98D1E044339DCBFD2F807EC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +193,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98D1E044339DCBFD2F807EC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D25E5B956260F14E7C5DA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCDidIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02157202213D981400541DF0 /* Sources */ = {
@@ -318,6 +393,7 @@
 		};
 		02157219213D981900541DF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3872DA7D9F3F1EB8776BD4B3 /* Pods-OCDidIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +412,7 @@
 		};
 		0215721A213D981900541DF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB9AA77E09CDEBB6AB4D447 /* Pods-OCDidIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
