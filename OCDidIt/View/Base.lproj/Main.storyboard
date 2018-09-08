@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--OCDidIt-->
+        <!--Items-->
         <scene sceneID="XG8-qU-gIN">
             <objects>
                 <tableViewController id="PUR-Uo-99c" customClass="TodoListViewController" customModule="OCDidIt" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="PUR-Uo-99c" id="vP0-pN-kxE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="OCDidIt" id="X2z-2e-UwG">
+                    <navigationItem key="navigationItem" title="Items" id="X2z-2e-UwG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4v-ag-fTv">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -51,7 +51,45 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w06-QU-vUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2073" y="134"/>
+            <point key="canvasLocation" x="2770" y="134"/>
+        </scene>
+        <!--OCDidIt-->
+        <scene sceneID="O1G-W5-UTy">
+            <objects>
+                <tableViewController id="RG2-Oy-Qij" customClass="CategoryViewController" customModule="OCDidIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JEJ-VA-vyc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="87P-yg-0yh">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="87P-yg-0yh" id="ZxS-Nv-hrt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RG2-Oy-Qij" id="eW9-7x-2kh"/>
+                            <outlet property="delegate" destination="RG2-Oy-Qij" id="5Tr-XY-bar"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="OCDidIt" id="TNW-WX-5s5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kFM-po-O0b">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="RG2-Oy-Qij" id="wTh-Qo-aoy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="PUR-Uo-99c" kind="show" identifier="goToItems" id="ysR-IV-hVh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYJ-z2-sGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2rV-RQ-LSU">
@@ -68,7 +106,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="PUR-Uo-99c" kind="relationship" relationship="rootViewController" id="cUu-81-IhB"/>
+                        <segue destination="RG2-Oy-Qij" kind="relationship" relationship="rootViewController" id="d8t-qN-uca"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWj-qO-rXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
