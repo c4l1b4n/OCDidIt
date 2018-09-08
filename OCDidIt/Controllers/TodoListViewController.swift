@@ -48,7 +48,6 @@ class TodoListViewController: UITableViewController {
         return cell
     }
     
-    
     //MARK - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -80,7 +79,6 @@ class TodoListViewController: UITableViewController {
         let alert = UIAlertController(title: "Add New OCDidIt Item", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            //what will happen once the user clicks the Add Item button on the UIAlert
             
             if let currentCategory = self.selectedCategory {
                 do{
