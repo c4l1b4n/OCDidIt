@@ -12,8 +12,9 @@
 		0215720F213D981500541DF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0215720D213D981500541DF0 /* Main.storyboard */; };
 		02157211213D981900541DF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02157210213D981900541DF0 /* Assets.xcassets */; };
 		02157214213D981900541DF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02157212213D981900541DF0 /* LaunchScreen.storyboard */; };
+		02694678214453C6004B9B1B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02694677214453C6004B9B1B /* Item.swift */; };
+		0269467A214453D2004B9B1B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02694679214453D2004B9B1B /* Category.swift */; };
 		0279B2AF21435D8700A33150 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279B2AE21435D8700A33150 /* CategoryViewController.swift */; };
-		02C7926321409B6B00203C41 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C7926121409B6B00203C41 /* DataModel.xcdatamodeld */; };
 		064B9CC2A7E840F0DB996BA8 /* Pods_OCDidIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +26,9 @@
 		02157210213D981900541DF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02157213213D981900541DF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02157215213D981900541DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02694677214453C6004B9B1B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		02694679214453D2004B9B1B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0279B2AE21435D8700A33150 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = OCDidIt/Controllers/CategoryViewController.swift; sourceTree = SOURCE_ROOT; };
-		02C7926221409B6B00203C41 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		3872DA7D9F3F1EB8776BD4B3 /* Pods-OCDidIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB9AA77E09CDEBB6AB4D447 /* Pods-OCDidIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.release.xcconfig"; sourceTree = "<group>"; };
 		FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCDidIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +80,8 @@
 		02BD1F19213F707C0027804A /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				02C7926121409B6B00203C41 /* DataModel.xcdatamodeld */,
+				02694679214453D2004B9B1B /* Category.swift */,
+				02694677214453C6004B9B1B /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -200,16 +203,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -224,15 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-OCDidIt-checkManifestLockResult.txt",
 			);
@@ -248,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02694678214453C6004B9B1B /* Item.swift in Sources */,
 				0279B2AF21435D8700A33150 /* CategoryViewController.swift in Sources */,
 				0215720C213D981500541DF0 /* TodoListViewController.swift in Sources */,
-				02C7926321409B6B00203C41 /* DataModel.xcdatamodeld in Sources */,
 				0215720A213D981400541DF0 /* AppDelegate.swift in Sources */,
+				0269467A214453D2004B9B1B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,19 +447,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		02C7926121409B6B00203C41 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				02C7926221409B6B00203C41 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 02C7926221409B6B00203C41 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 021571FE213D981400541DF0 /* Project object */;
 }
