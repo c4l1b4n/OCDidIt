@@ -14,6 +14,7 @@
 		02157214213D981900541DF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02157212213D981900541DF0 /* LaunchScreen.storyboard */; };
 		02694678214453C6004B9B1B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02694677214453C6004B9B1B /* Item.swift */; };
 		0269467A214453D2004B9B1B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02694679214453D2004B9B1B /* Category.swift */; };
+		0269467E21449AD7004B9B1B /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269467D21449AD7004B9B1B /* SwipeTableViewController.swift */; };
 		0279B2AF21435D8700A33150 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0279B2AE21435D8700A33150 /* CategoryViewController.swift */; };
 		064B9CC2A7E840F0DB996BA8 /* Pods_OCDidIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFC9787A79D590EFF39C0FB /* Pods_OCDidIt.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		02157215213D981900541DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02694677214453C6004B9B1B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		02694679214453D2004B9B1B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0269467D21449AD7004B9B1B /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		0279B2AE21435D8700A33150 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = OCDidIt/Controllers/CategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		3872DA7D9F3F1EB8776BD4B3 /* Pods-OCDidIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.debug.xcconfig"; sourceTree = "<group>"; };
 		CBB9AA77E09CDEBB6AB4D447 /* Pods-OCDidIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDidIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				0279B2AE21435D8700A33150 /* CategoryViewController.swift */,
 				0215720B213D981500541DF0 /* TodoListViewController.swift */,
+				0269467D21449AD7004B9B1B /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,11 +210,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-OCDidIt/Pods-OCDidIt-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -247,6 +252,7 @@
 				0279B2AF21435D8700A33150 /* CategoryViewController.swift in Sources */,
 				0215720C213D981500541DF0 /* TodoListViewController.swift in Sources */,
 				0215720A213D981400541DF0 /* AppDelegate.swift in Sources */,
+				0269467E21449AD7004B9B1B /* SwipeTableViewController.swift in Sources */,
 				0269467A214453D2004B9B1B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
